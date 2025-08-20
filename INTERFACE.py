@@ -114,7 +114,7 @@ class UI():
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Created by:").grid(row=8, column=4, columnspan=2, sticky="s")
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Daniele Concas").grid(row=9, column=4, columnspan=2, sticky="s")
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Daniele Sanna").grid(row=10, column=4, columnspan=2, sticky="n")
-        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Version: 10.0").grid(row=11, column=4, columnspan=2, sticky="s")
+        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Version: 10.1").grid(row=11, column=4, columnspan=2, sticky="s")
         Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Data: 20/08/2025").grid(row=12, column=4, columnspan=2, sticky="n")
         Label(root,bg="#2f343f",fg="white",font=("NotoSans",font_size), text="© 2025 - Isolameteo.it").grid(row=13, column=4, columnspan=2, sticky="n")
 
