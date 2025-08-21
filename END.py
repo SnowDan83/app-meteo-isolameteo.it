@@ -23,7 +23,7 @@ class close():
             # Create a label widget
             label = tk.Label(
                 window,
-                text="Immagini Generate\nCorrettamente\n\n",
+                text="Immagini Generate\nCorrettamente :-)\n\n",
                 anchor="center",
                 width=25,
                 bg="#2f343f",
