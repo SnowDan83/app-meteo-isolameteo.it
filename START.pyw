@@ -54,4 +54,4 @@ class main():
             data[i] = giorni[i].strftime("%d/%m/%Y")    #Metodo parse per assegnare la data all'Array 'data[]'
             oggetti[i] = PNG.PNG_Maker(data[i], str(i+1)+".png")  #Creazione oggetto di classe 'PNG_Maker'
         close = END.close()   #Creazione oggetto di classe 'close'
-#--------------------Fine Classe main--------------------#
+#_--------------------Fine Classe main--------------------_#

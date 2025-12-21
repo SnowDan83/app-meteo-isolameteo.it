@@ -44,13 +44,13 @@ class UI():
         base_height = 1080
         scale_factor = min(screen_w / base_width, screen_h / base_height)
         
-        app_width = int(1845 * scale_factor)
-        app_height = int(940 * scale_factor)
+        app_width = int(1920 * scale_factor)
+        app_height = int(1080 * scale_factor)
         
         # Font principale
-        font_size = max(int(12 * scale_factor), 8)
+        font_size = max(int(13 * scale_factor), 8)
         # MODIFICA 3: Font ridotto per i menu (circa 85% del normale)
-        menu_font_size = max(int(6 * scale_factor), 7)
+        menu_font_size = max(int(8 * scale_factor), 7)
 
         xw=(screen_w/2)-(app_width/2)
         yh=(screen_h/2)-(app_height/2)
@@ -133,8 +133,8 @@ class UI():
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Created by:").grid(row=8, column=4, columnspan=2, sticky="s")
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Daniele Concas").grid(row=9, column=4, columnspan=2, sticky="s")
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Daniele Sanna").grid(row=10, column=4, columnspan=2, sticky="n")
-        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Version: 10.6").grid(row=11, column=4, columnspan=2, sticky="s")
-        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Data: 13/12/2025").grid(row=12, column=4, columnspan=2, sticky="n")
+        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Version: 10.7").grid(row=11, column=4, columnspan=2, sticky="s")
+        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Data: 21/12/2025").grid(row=12, column=4, columnspan=2, sticky="n")
         Label(root,bg="#2f343f",fg="white",font=("NotoSans",font_size), text="© 2025 - Isolameteo.it").grid(row=13, column=4, columnspan=2, sticky="n")
 
         root.mainloop()

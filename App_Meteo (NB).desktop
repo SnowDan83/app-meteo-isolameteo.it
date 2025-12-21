@@ -3,7 +3,7 @@ Version=1.0
 Type=Application
 Name=App Meteo
 Comment=Lancia la mia interfaccia Tkinter
-# IMPORTANTE: Sostituisci i percorsi qui sotto con quelli reali
+## IMPORTANTE: Sostituisci i percorsi qui sotto con quelli reali
 Exec=/usr/bin/python3 /home/danyslipknot83/Software/App_Meteo/START.pyw
 Path=/home/danyslipknot83/Software/App_Meteo/
 Icon=/home/danyslipknot83/Software/App_Meteo/icone/icon.png
