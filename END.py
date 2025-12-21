@@ -28,12 +28,12 @@ class close():
                 width=25,
                 bg="#2f343f",
                 fg="white",
-                font =("Arialbold", 14)
+                font =("Notosans", 14)
             )
             widget = Button(text='EXIT')
             widget.config(bd=4, relief=RAISED)
             widget.config(bg="#2f343f", fg="white")
-            widget.config(font=('Arial', 10, 'bold'))
+            widget.config(font=('Notosans', 10, 'bold'))
             widget.config(command=window.destroy)
 
             # Pack the label widget to display it

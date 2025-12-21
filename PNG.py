@@ -62,13 +62,14 @@ class PNG_Maker():
 
         with Drawing() as draw:
           with Image(filename = "./quasi.png") as img:    #Scelta immagine
-            draw.font = 'Cantarell' #Font scritta
+            draw.font = '/usr/share/fonts/noto/NotoSans-Regular.ttf' #Font scritta
             draw.font_size = 16 #Dimensione scritta
             draw.fill_color=Color('yellow') #Colore scritta
             draw.text(510, 22, stringaGiorno)   #Scrittura data
             draw(img)
             img.save(filename = stringaNome)    #Salvataggio immagine
         img.close() #Chiusura immagine
+
 
         #Spostamento file
         src = "./"
