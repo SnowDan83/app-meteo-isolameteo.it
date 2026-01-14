@@ -138,9 +138,9 @@ class UI():
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Created by:").grid(row=8, column=4, columnspan=2, sticky="s")
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Daniele Concas").grid(row=9, column=4, columnspan=2, sticky="s")
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Daniele Sanna").grid(row=10, column=4, columnspan=2, sticky="n")
-        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Version: 10.7").grid(row=11, column=4, columnspan=2, sticky="s")
+        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Version: 11.1").grid(row=11, column=4, columnspan=2, sticky="s")
         Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Data: 21/12/2025").grid(row=12, column=4, columnspan=2, sticky="n")
-        Label(root,bg="#2f343f",fg="white",font=("NotoSans",font_size), text="© 2025 - Isolameteo.it").grid(row=13, column=4, columnspan=2, sticky="n")
+        Label(root,bg="#2f343f",fg="white",font=("NotoSans",font_size), text="© 2026 - Isolameteo.it").grid(row=13, column=4, columnspan=2, sticky="n")
 
         # Se root è Tk (principale), mainloop blocca qui. Se è Toplevel, wait_window blocca qui.
         if isinstance(root, Tk):
@@ -188,8 +188,8 @@ class ProgressWindow():
         # Centra la finestra
         screen_w = self.root.winfo_screenwidth()
         screen_h = self.root.winfo_screenheight()
-        w = 400
-        h = 180
+        w = 600
+        h = 280
         x = (screen_w/2) - (w/2)
         y = (screen_h/2) - (h/2)
         self.root.geometry(f'{w}x{h}+{int(x)}+{int(y)}')

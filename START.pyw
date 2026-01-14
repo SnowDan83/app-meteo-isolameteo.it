@@ -67,7 +67,7 @@ class main():
         # DATI FTP - DA CONFIGURARE
         ftp_host = "ftp.nomesito.com"
         ftp_user = "USERNAME"   # <-- INSERISCI QUI IL TUO USERNAME
-        ftp_pass = "PASSWORD%"   # <-- INSERISCI QUI LA TUA PASSWORD
+        ftp_pass = "PASSWORD"   # <-- INSERISCI QUI LA TUA PASSWORD
         ftp_path = "/percorso_upload"
 
         try:

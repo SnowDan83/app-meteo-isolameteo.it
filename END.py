@@ -42,3 +42,4 @@ class close():
 
             # Run the application
             window.mainloop()
+

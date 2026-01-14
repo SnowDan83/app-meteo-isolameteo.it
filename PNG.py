@@ -77,4 +77,4 @@ class PNG_Maker():
         files = [i for i in os.listdir(src) if i.startswith(stringaNome) and path.isfile(path.join(src, i))]
         for f in files:
             shutil.move(os.path.join(src, f), os.path.join(dst, f))
-#_--------------------Fine Classe PNG_Maker--------------------_#
+#--------------------Fine Classe PNG_Maker--------------------#
