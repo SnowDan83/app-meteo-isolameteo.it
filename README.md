@@ -1,113 +1,113 @@
-## 🌦️ App Meteo - Isolameteo.it
+# 🌦️ App Meteo - Isolameteo.it
 
-Applicazione desktop avanzata per la generazione automatizzata di grafiche meteorologiche per la Sardegna. Il software permette di scaricare dati modellistici, personalizzare le previsioni per diverse località tramite interfaccia grafica, generare immagini PNG composte e caricarle automaticamente su un server FTP.
+**App Meteo** è un software desktop sviluppato per l'automazione delle previsioni grafiche di Isolameteo.it. L'applicazione gestisce l'intero flusso di lavoro: dal download dei dati modellistici alla generazione di mappe meteorologiche personalizzate per la Sardegna, fino alla pubblicazione automatica su server FTP.
 
-Versione: 11.2
-## 📜 Funzionamento del Software
+**Versione:** 11.2
 
-Il flusso di lavoro dell'applicazione è gestito da diversi moduli integrati:
+---
 
-    Avvio e Download Dati (START.pyw):
+## 📋 Panoramica del Funzionamento
 
-        Calcola la data e l'ora attuali per determinare il run modellistico corretto.
+L'architettura del software è modulare e suddivisa in quattro fasi logiche distinte:
 
-        Scarica automaticamente i grafici "spaghi" (temperatura e vento) da meteociel.fr per l'area della Sardegna.
+1.  **Acquisizione Dati (`START.pyw`)**
+    * Identificazione automatica del run modellistico più recente in base all'orario di esecuzione.
+    * Download dei grafici previsionali ("spaghi" per temperatura e vento) dalla fonte *meteociel.fr*.
+2.  **Configurazione Previsione (`INTERFACE.py`)**
+    * Visualizzazione dei dati scaricati tramite interfaccia grafica (GUI) adattiva.
+    * Input manuale delle condizioni meteorologiche per le località target: Sassari, Olbia, Oristano, Nuoro, Iglesias e Cagliari.
+    * Definizione dei parametri di vento (direzione e intensità) e tendenza termica.
+3.  **Elaborazione Grafica (`PNG.py`)**
+    * Composizione delle immagini finali utilizzando la libreria `Wand` (ImageMagick).
+    * Sovrapposizione dinamica di icone meteo, frecce del vento e indicatori di temperatura sulla mappa base della Sardegna.
+4.  **Pubblicazione (`START.pyw`)**
+    * Connessione automatica al server FTP.
+    * Upload dei file generati (`1.png`, `2.png`, `3.png`) nella directory remota specificata.
 
-    Interfaccia Utente (INTERFACE.py):
+---
 
-        Mostra i grafici scaricati come riferimento.
+## ⚙️ Requisiti di Sistema
 
-        Presenta un'interfaccia responsive (si adatta alla risoluzione dello schermo usando PyAutoGUI).
+### Prerequisiti Software
+Il corretto funzionamento del motore grafico richiede l'installazione di **ImageMagick**:
+* **Windows**: Scaricare l'eseguibile dal [sito ufficiale](https://imagemagick.org/script/download.php#windows).
+    * ⚠️ **Importante**: Durante l'installazione, selezionare l'opzione *"Install development headers and libraries for C and C++"*.
 
-        Permette di impostare le condizioni per 6 località chiave: Sassari, Olbia, Oristano, Nuoro, Iglesias, Cagliari.
+### Dipendenze Python
+Il progetto necessita delle librerie elencate nel file `requirements.txt`. Le dipendenze principali includono:
+* `Wand`: Gestione ed elaborazione delle immagini.
+* `PyAutoGUI`: Adattamento della risoluzione dell'interfaccia.
+* `requests`: Gestione delle richieste HTTP per il download dei dati.
+* `tkinter`: Libreria standard per l'interfaccia grafica.
 
-        Permette di definire i venti (Nord, Ovest, Est, Sud) e il trend termico.
-
-    Generazione Grafica (PNG.py):
-
-        Utilizza la libreria Wand (ImageMagick) per comporre le icone meteo, le frecce del vento e le temperature sulla mappa base della Sardegna.
-
-        Salva le immagini generate nella cartella ./pronte.
-
-    Upload Automatico (START.pyw e INTERFACE.py):
-
-        Al termine della generazione dei 3 giorni, avvia una finestra di progresso.
-
-        Si connette a un server FTP pre-configurato e carica le immagini (1.png, 2.png, 3.png).
-
-## 🛠️ Requisiti e Installazione
-Prerequisiti di Sistema
-
-Poiché l'app utilizza la libreria Wand, è necessario avere installato ImageMagick sul sistema operativo.
-
-    Windows: Scaricare e installare ImageMagick. Durante l'installazione, assicurarsi di spuntare la casella "Install development headers and libraries for C and C++".
-
-Dipendenze Python
-
-Il progetto utilizza un file requirements.txt per la gestione delle librerie. Le principali sono:
-
-    Wand: Per l'elaborazione delle immagini.
-
-    PyAutoGUI: Per il ridimensionamento della GUI in base allo schermo.
-
-    requests: Per il download dei grafici meteo.
-
-    tkinter: Per l'interfaccia grafica (inclusa standard in Python).
-
-Per installare tutte le dipendenze necessarie, eseguire:
-Bash
-
+Per installare l'ambiente, eseguire il comando:
+```bash
 pip install -r requirements.txt
 
-Nota: Il file requirements.txt include versioni specifiche (es. Wand==0.6.13, requests==2.32.5) per garantire la compatibilità.
-⚙️ Configurazione FTP
+```
 
-Prima di utilizzare la funzione di upload automatico, è necessario configurare le credenziali FTP nel file START.pyw.
+---
 
-Aprire START.pyw con un editor di testo e cercare la sezione:
-Python
+## 🔧 Configurazione
 
-## DATI FTP - DA CONFIGURARE
-ftp_host = "ftp.nomesito.com"
-ftp_user = "USERNAME"   # <-- INSERISCI QUI IL TUO USERNAME
-ftp_pass = "PASSWORD"   # <-- INSERISCI QUI LA TUA PASSWORD
-ftp_path = "/percorso_upload"
+Prima del primo utilizzo, è necessario configurare i parametri di accesso al server FTP.
 
-Sostituire i valori con quelli del proprio server.
-🚀 Utilizzo
+1. Aprire il file `START.pyw` con un editor di testo.
+2. Individuare la sezione di configurazione (riga ~70):
+3. Inserire le proprie credenziali sostituendo i valori placeholder:
 
-    Assicurarsi che la struttura delle cartelle sia corretta (cartella icone presente, cartella pronte presente).
+```python
+# DATI FTP - DA CONFIGURARE
+ftp_host = "ftp.tuosito.com"
+ftp_user = "TUO_USERNAME"
+ftp_pass = "TUA_PASSWORD"
+ftp_path = "/percorso_remoto_upload"
 
-    Eseguire lo script principale:
+```
 
-Bash
+---
 
+## 🚀 Guida all'Uso
+
+1. **Verifica Preliminare**: Assicurarsi che nella directory del programma siano presenti le cartelle `./icone` e `./pronte`.
+2. **Avvio**: Eseguire lo script principale:
+```bash
 python START.pyw
 
-    L'applicazione richiederà di inserire le previsioni per il Giorno 1, poi il Giorno 2 e infine il Giorno 3.
+```
 
-    Al termine dell'inserimento, l'app mostrerà una barra di caricamento per l'upload FTP e confermerà il successo dell'operazione.
 
-## 📂 Struttura dei File
+3. **Input Dati**:
+* L'interfaccia richiederà l'inserimento delle condizioni per 3 giorni consecutivi (Giorno 1, Giorno 2, Giorno 3).
+* Selezionare le opzioni dai menu a tendina per ogni località e parametro.
 
-    START.pyw: Script principale (Download, Loop giorni, Upload FTP).
 
-    INTERFACE.py: Gestione GUI, Layout Griglia, Finestra di Progresso.
+4. **Generazione e Upload**:
+* Al termine dell'inserimento, il sistema genererà le immagini.
+* Una finestra di dialogo mostrerà l'avanzamento dell'upload FTP.
+* La procedura terminerà con un messaggio di conferma.
 
-    PNG.py: Motore grafico per la creazione dei file .png.
 
-    END.py: Finestra di conferma chiusura.
 
-    base.png: Mappa base della Sardegna.
+---
 
-    /icone: Cartella contenente tutte le risorse grafiche (meteo, venti, temperature).
+## 📂 Struttura del Progetto
 
-    /pronte: Cartella di destinazione per le immagini generate.
+* `START.pyw`: Script di avvio, gestisce il download dei dati e il client FTP.
+* `INTERFACE.py`: Gestisce il layout grafico e la finestra di progresso.
+* `PNG.py`: Modulo core per l'elaborazione e la creazione delle immagini PNG.
+* `END.py`: Modulo per la notifica di completamento operazioni.
+* `requirements.txt`: Elenco delle dipendenze necessarie.
+
+---
 
 ## ✍️ Autori
 
-    Daniele Concas
-
-    Daniele Sanna
+* **Daniele Concas**
+* **Daniele Sanna**
 
 © 2026 - Isolameteo.it
+
+```
+
+```
