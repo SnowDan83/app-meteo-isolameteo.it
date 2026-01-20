@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 #-----Librerie-----#
+#Version: 11.2#
+
 from datetime import timedelta  #Per recapitare la data
 import requests #Per richiedere l'immagine a Internet
 from datetime import datetime #Per recuperare la data

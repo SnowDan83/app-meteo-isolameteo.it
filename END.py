@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 #-----Librerie-----#
+#Version: 11.2#
+
 from tkinter import *   #Interfaccia Grafica
 import tkinter as tk    #Interfaccia Grafica
 import math
