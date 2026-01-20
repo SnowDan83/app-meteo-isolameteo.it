@@ -1,1 +1,0 @@
-python '/home/danyslipknot/Insync/danielesanna1983@gmail.com/Google Drive/Informatica/isolameteo.it/app_meteo/Script-Mappe-ICON-2I/Pioggia-Nuvole.py'
