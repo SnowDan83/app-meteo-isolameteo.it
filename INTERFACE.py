@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #-----Librerie-----#
-#Version: 11.2#
+#Version: 11.3#
 
 from tkinter import * #Interfaccia Grafica
 from tkinter import ttk #Per la Progressbar
@@ -140,8 +140,8 @@ class UI():
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Created by:").grid(row=8, column=4, columnspan=2, sticky="s")
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Daniele Concas").grid(row=9, column=4, columnspan=2, sticky="s")
         Label(root,bg="#2f343f",fg="red",font=("NotoSans",font_size), text="Daniele Sanna").grid(row=10, column=4, columnspan=2, sticky="n")
-        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Version: 11.2").grid(row=11, column=4, columnspan=2, sticky="s")
-        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Data: 20/01/2026").grid(row=12, column=4, columnspan=2, sticky="n")
+        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Version: 11.3").grid(row=11, column=4, columnspan=2, sticky="s")
+        Label(root,bg="#2f343f",fg="green",font=("NotoSans",font_size), text="Data: 01/03/2026").grid(row=12, column=4, columnspan=2, sticky="n")
         Label(root,bg="#2f343f",fg="white",font=("NotoSans",font_size), text="© 2026 - Isolameteo.it").grid(row=13, column=4, columnspan=2, sticky="n")
 
         # Se root è Tk (principale), mainloop blocca qui. Se è Toplevel, wait_window blocca qui.

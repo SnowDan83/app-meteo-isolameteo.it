@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #-----Librerie-----#
-#Version: 11.2#
+#Version: 11.3#
 
 from tkinter import *   #Interfaccia Grafica
 import tkinter as tk    #Interfaccia Grafica
