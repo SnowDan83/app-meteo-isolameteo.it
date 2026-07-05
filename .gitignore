@@ -1,0 +1,4 @@
+# .gitignore
+# Vers. 1.4
+Provisionig/
+*.log
