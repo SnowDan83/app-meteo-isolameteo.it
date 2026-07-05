@@ -2,7 +2,7 @@
 
 **App Meteo** è un software desktop sviluppato per l'automazione delle previsioni grafiche di Isolameteo.it. L'applicazione gestisce l'intero flusso di lavoro: dal download dei dati modellistici alla generazione di mappe meteorologiche personalizzate per la Sardegna, fino alla pubblicazione automatica su server FTP.
 
-**Versione:** 11.2
+**Versione:** 11.4
 
 ---
 

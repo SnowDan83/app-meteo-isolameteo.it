@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #-----Librerie-----#
-#Version: 11.3#
+#Version: 11.4#
 
 import urllib.request as urllib2
 from wand.image import Image    #Creazione immagine

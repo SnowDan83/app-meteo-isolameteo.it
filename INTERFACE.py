@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #-----Librerie-----#
-#Version: 11.3#
+#Version: 11.4#
 
 from tkinter import * #Interfaccia Grafica
 from tkinter import ttk #Per la Progressbar
